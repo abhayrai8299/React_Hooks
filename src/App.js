@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
 
+import { useState } from 'react';
+import './App.css';
+import Usememos from './usememo';
+import Memo1 from './memo1';
+import Lazyloading from './lazyloading';
 function App() {
+  const [count,setCount]=useState(0);
+  const [data,setData]=useState(10);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Usememos />
+      <h1>Memo with React{count}</h1>
+      <Memo1 data={data} />
+      <button onClick={()=>setCount(count+1)}>Click</button> */}
+     <Lazyloading />
     </div>
   );
 }
